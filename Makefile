@@ -8,3 +8,4 @@ endif
 
 echo:
 	@echo using $(OCM)
+	@which ocm
