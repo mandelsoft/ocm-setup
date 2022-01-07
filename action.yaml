@@ -1,0 +1,15 @@
+name: 'Open Component Model tool installer'
+description: 'Install a specific version of the ocm binary. Acceptable values are latest or any semantic version string like 1.15.0'
+inputs:
+  version:
+    description: 'Version of ocm'
+    required: true
+    default: 'v0.32.0'
+outputs:
+  ocm-path:
+    description: 'Path to the cached ocm binary'
+branding:
+  color: 'blue'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
