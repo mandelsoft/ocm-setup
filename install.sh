@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/sh -e
 
 
 WORKSPACE="${GITHUB_WORKSPACE:=/usr/local}"
@@ -10,10 +10,10 @@ FILE="$(basename "$ARCHIVEFILE" .gz)"
 TARGET=${WORKSPACE}/bin/ocm
 
 echo "Install Open Component Model Tool version $version"
-cd /tmp
 rm -f "$ARCHIVEFILE"
 wget "$URL/$VERSION/$ARCHIVEFILE"
 gunzip -f "$ARCHIVEFILE"
+mkdir -p "$(dirname "$TARGET")"
 cp "$FILE" "$TARGET"
 chmod a+x "$TARGET"
 echo "::set-output name=ocm-path::$TARGET"

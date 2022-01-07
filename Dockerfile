@@ -5,4 +5,4 @@ FROM alpine:3.10
 COPY install.sh /install.sh
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
-ENTRYPOINT ["/install.sh"]
+CMD ["/install.sh"]
