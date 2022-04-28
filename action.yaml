@@ -24,4 +24,5 @@ runs:
       version: ${{ inputs.version }}
       repo: ${{ inputs.repo }}
     run: |
-      ./install.sh
+      echo "path: ${{ github.action_path }}"
+      "${{ github.action_path }}/install.sh"
