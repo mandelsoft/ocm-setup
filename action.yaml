@@ -4,11 +4,11 @@ inputs:
   version:
     description: 'Version of the ocm tool'
     required: true
-    default: 'v0.32.0'
+    default: 'v0.1.0-alpha.1'
   repo:
     description: 'Repository of the ocm tool'
     required: true
-    default: 'gardener/component-cli'
+    default: 'open-component-model/ocm'
 outputs:
   ocm-path:
     description: 'Path to the cached ocm binary'
